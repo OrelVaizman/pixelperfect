@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <script src="https://use.fontawesome.com/releases/v5.14.0/js/all.js" data-auto-a11y="true"></script>
+    <title>Pixel-Perfect</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="header-container container flex align-center space-between">
+            <div class="main-logo logo green"><a href="#">Blogin</a>.</div>
+            <button class="mobile-menu" onclick="onToggleMenu()"><i class="fas fa-bars"></i></button>
+            <ul class="main-nav clean-list flex">
+                <li class="close-menu-li"><button class="close-menu" onclick="onToggleMenu()"><i
+                            class="fas fa-times"></i></button></li>
+                <li><a href="">journal</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">work</a></li>
+                <li><a href="">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main-content container">
+        <section class="modal column">
+            <h1>Join us to get access to the latest stories!</h1>
+            <form action="">
+                <label for="email-form">Enter your email:</label>
+                <input type="email" id="email-form" name="email" placeholder="Enter Your Email">
+            </form>
+            <div class="modal-buttons flex justify-center">
+                <button class="btn-close-modal" onclick="toggleModal()">close</button>
+                <button class="btn-close-modal" onclick="toggleModal()">submit</button>
+            </div>
+        </section>
+        <div class="card flex">
+            <img src="/imgs/001.png" alt="" class="card-image">
+            <div class="card-description flex column space-between">
+                <h2 class="card-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...
+                </p>
+                <button class="card-button" onclick="toggleModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex">
+            <img src="/imgs/002.png" alt="" class="card-image">
+            <div class="card-description flex column space-between">
+                <h2 class="card-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...
+                </p>
+                <button class="card-button" onclick="toggleModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex">
+            <img src="/imgs/003.png" alt="" class="card-image">
+            <div class="card-description flex column space-between">
+                <h2 class="card-title">Duis aute irure dolor in
+                    henderit in voluptate.</h2>
+                <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                    ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur...
+                </p>
+                <button class="card-button" onclick="toggleModal()">Continue Reading</button>
+            </div>
+        </div>
+        <section class="nav-paging flex space-between">
+            <button class="previous-page">← Previous</button>
+            <button class="next-page">Next →</button>
+        </section>
+    </main>
+    <footer class="main-footer flex column align-center">
+        <!-- <img src="/imgs/footer-logo.png" alt="" class="footer-logo"> -->
+        <!-- <div class="logo green"></div> -->
+        <div class="footer-logo green logo"><a href="#">Blogin</a>.</div>
+        <small class="copyright">© 2014 Blogin.com - All Rights Reserved - Find more free Templates at <span
+                class="bolded-span">Pixelhint.com</span></small>
+        <ul class="nav-social clean-list flex">
+            <li class="facebook-icon social-li"><a href="" class="socialmedia-link"><i
+                        class="fab fa-facebook-f"></i></a></li>
+            <li class="twitter-icon social-li"><a href="" class="socialmedia-link"><i class="fab fa-twitter"></i></a>
+            </li>
+            <li class="behance-icon social-li"><a href="" class="socialmedia-link"><i class="fab fa-behance"></i></a>
+            </li>
+            <li class="dribble-icon social-li"><a href="" class="socialmedia-link"><i class="fab fa-dribbble"></i></a>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        function onToggleMenu() {
+            var elMobileNav = document.querySelector('.main-nav');
+            elMobileNav.classList.toggle('open-menu')
+        }
+
+        function toggleModal() {
+            var currDisplay = document.querySelector('.modal').style.display;
+            if (currDisplay === 'block') currDisplay = 'none';
+            else currDisplay = 'block';
+            document.querySelector('.modal').style.display = currDisplay;
+        }
+
+    </script>
+</body>
+
+</html>
